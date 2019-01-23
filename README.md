@@ -25,15 +25,16 @@ Banners will be displayed immediately once they are returned from Phunware’s a
 
 The response functions are included in a closure passed to the placement request.
 
-Creating a banner with PWBanner(placement, parentViewController, position)
+Creating a banner with 
+```swift
+PWBanner(placement, parentViewController, position)
+```
+-placement (currently, only one placement should be returned from Phunware, but in the future a list may be returned. For now, only placement[0] will ever be used.
+-parentViewController (This is the containing controller that should house the banner. Typically this will be the view controller doing the banner request)
+-position (A string constant noting where the banner should appear on screen. Positions values can be found in Phunware.MRAIDConstants)
 
-placement (currently, only one placement should be returned from Phunware, but in the future a list may be returned. For now, only placement[0] will ever be used.
-parentViewController (This is the containing controller that should house the banner. Typically this will be the view controller doing the banner request)
-position (A string constant noting where the banner should appear on screen. Positions values can be found in Phunware.MRAIDConstants)
 ## Retrieving a banner:
-
 Width and height are optional here. Most of the time the width and height will come from the zone in your Phunware configuration but if that is not set, you may want to set a fallback here.
-
 ```swift
     let config = PlacementRequestConfig(accountId: 174812, zoneId: 335387, width:320, height:50, customExtras:nil)
     Phunware.requestPlacement(with: config) { response in
@@ -57,6 +58,7 @@ Width and height are optional here. Most of the time the width and height will c
         }
     } 
 ```
+
 ## Usuage Interstitials:
 ```swift
 Your view controller will need to implement the PWInterstitialDelegate interface to retrieve event information.
