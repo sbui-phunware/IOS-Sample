@@ -1,8 +1,8 @@
 #  HapticBeats with Phunware Ads
 
 Can we create a cool experience by combining haptic feedback with the beats of a song?
-See Banner ads in the Bottom Footer
-When select Song Interstitial ads will appear
+- See Banner ads in the Bottom Footer
+- When Song is selected Interstitial ads will appear
 
 ## Requirements
 
