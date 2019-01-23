@@ -59,7 +59,7 @@ Width and height are optional here. Most of the time the width and height will c
     
 ```
 ## Usuage Interstitials:
-
+```swift
 Your view controller will need to implement the PWInterstitialDelegate interface to retrieve event information.
 
 These methods are:
@@ -98,7 +98,12 @@ let config = PlacementRequestConfig(accountId: 174812, zoneId: 335348, width:nil
             return
         }
     }
+    
+    ```
 ## Creating an interstitial with:
+
+```swift
+
 PWInterstitial(placement, parentViewController, delegate, respectSafeAreaLayoutGuide)
 
 placement (as with banners, currently only one placement will be returned from Phunware)
@@ -109,3 +114,6 @@ Once retrieved, the interstitialReady function will be called. After this point 
 
 interstitial.display();
 The interstitial can only been displayed once, after which you must retrieve another one.
+
+```
+
