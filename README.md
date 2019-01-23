@@ -55,8 +55,7 @@ Width and height are optional here. Most of the time the width and height will c
         case .requestError(let error):
             return
         }
-    }
-    
+    } 
 ```
 ## Usuage Interstitials:
 ```swift
@@ -80,6 +79,7 @@ func interstitialStartLoad(_ interstitial: PWInterstitial) {
     print("start load");
 }
 ## Retrieving an interstitial:
+
 ```swift
 let config = PlacementRequestConfig(accountId: 174812, zoneId: 335348, width:nil, height:nil, customExtras:nil)
     Phunware.requestPlacement(with: config) { response in
@@ -97,14 +97,13 @@ let config = PlacementRequestConfig(accountId: 174812, zoneId: 335348, width:nil
         default:
             return
         }
-    }
-    
+    } 
 ```
+
 ## Creating an interstitial with:
 ```swift
 PWInterstitial(placement, parentViewController, delegate, respectSafeAreaLayoutGuide)
 ```
-
 
 ● placement (as with banners, currently only one placement will be returned from Phunware)
 ● parentViewController (The view controller which will contain the interstitial, typically the same controller that retrieves the interstitial placement)
@@ -115,9 +114,7 @@ Once retrieved, the interstitialReady function will be called. After this point 
 
 
 ```swift
-
 interstitial.display();
-
 ```
 The interstitial can only been displayed once, after which you must retrieve another one.
 
