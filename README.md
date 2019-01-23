@@ -34,7 +34,8 @@ position (A string constant noting where the banner should appear on screen. Pos
 
 Width and height are optional here. Most of the time the width and height will come from the zone in your Phunware configuration but if that is not set, you may want to set a fallback here.
 
-let config = PlacementRequestConfig(accountId: 174812, zoneId: 335387, width:320, height:50, customExtras:nil)
+```swift
+    let config = PlacementRequestConfig(accountId: 174812, zoneId: 335387, width:320, height:50, customExtras:nil)
     Phunware.requestPlacement(with: config) { response in
         switch response {
         case .success(_ , let placements):
@@ -55,6 +56,8 @@ let config = PlacementRequestConfig(accountId: 174812, zoneId: 335387, width:320
             return
         }
     }
+    
+```
 ## Usuage Interstitials:
 
 Your view controller will need to implement the PWInterstitialDelegate interface to retrieve event information.
