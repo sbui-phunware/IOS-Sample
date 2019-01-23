@@ -63,7 +63,10 @@ If that is not set, you may want to set a fallback here.
 
 ## Usuage Interstitials:
 Your view controller will need to implement the 
-```swift PWInterstitialDelegate ``` interface to retrieve event information.
+```swift 
+PWInterstitialDelegate 
+``` 
+interface to retrieve event information.
 
 These methods are:
 ```swift
@@ -119,7 +122,11 @@ Typically the view controller which retrieves the interstitial)
 - respectSafeAreaLayoutGuide (Some apps may choose to have their layout take into account the safe area layout guide in order to have the status bar showing. 
 If your app does this, then this setting will tell the interstitial to do the same)
 
-Once retrieved, the ```swift interstitialReady ``` function will be called. After this point you can display the interstitial at any time with:
+Once retrieved, the 
+```swift 
+interstitialReady 
+``` 
+function will be called. After this point you can display the interstitial at any time with:
 
 
 ```swift
