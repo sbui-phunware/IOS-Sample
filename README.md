@@ -99,7 +99,7 @@ let config = PlacementRequestConfig(accountId: 174812, zoneId: 335348, width:nil
         }
     }
     
-    ```
+```
 ## Creating an interstitial with:
 
 ```swift
@@ -109,8 +109,12 @@ PWInterstitial(placement, parentViewController, delegate, respectSafeAreaLayoutG
 placement (as with banners, currently only one placement will be returned from Phunware)
 parentViewController (The view controller which will contain the interstitial, typically the same controller that retrieves the interstitial placement)
 delegate (A class that implements the PWInterstitialDelegate interface. Typically the view controller which retrieves the interstitial)
+
+```
 respectSafeAreaLayoutGuide (Some apps may choose to have their layout take into account the safe area layout guide in order to have the status bar showing. If your app does this, then this setting will tell the interstitial to do the same)
 Once retrieved, the interstitialReady function will be called. After this point you can display the interstitial at any time with:
+
+```swift
 
 interstitial.display();
 The interstitial can only been displayed once, after which you must retrieve another one.
